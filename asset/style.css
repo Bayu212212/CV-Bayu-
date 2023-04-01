@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    margin: 30px 0 20px;
+    font-weight: normal;
+    font-size: 48px;
+    text-align: center;
+}
+
+h2 {
+    max-width: 420px;
+    margin: 0 auto 20px ;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+h3 {
+    max-width: 420px;
+    margin: 0 auto 20px ;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+h3 img {
+    width: 15px;
+    height: 15px;
+    padding-right: 5px;
+}
+
+h4 {
+   margin: 0 0 20px; 
+   font-size: 24px;
+}
+
+.footer {
+    margin: 125px auto 30px;
+    font-size: 24px;
+    
+}
+
+.footer-copy {
+    margin: 125px auto 30px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.background {
+    width: calc(100% - 50px);
+    height: 215px;
+    margin: 25px auto 0;
+    background-color: #40C7DA;
+    border-radius: 15px;
+}
+
+.stacks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom:50px;
+}
+
+.stacks span {
+    padding: 5px 15px;
+    background-color: #F06529;
+    color: #fff;
+    border-radius:100px;
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    margin: 0 auto 50px;
+    border: solid 1px #888;
+    border-radius: 5px;
+    overflow: hidden;
+    
+}
+
+.toggle button {
+    display:block;
+    width: 50%;
+    padding: 10px 15px;
+    text-align: center;
+    background-color:#eee ;
+    font-size:20px ;
+    border: 0;
+}
+
+.toggle button.active {
+    background-color: #4cbbcf;
+    color: #fff;
+}
+
+
+.profile-pict {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: -135px auto 0;
+    border: solid 5px #fff;
+    border-radius: 50%;
+}
+
+.work-section {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-detail {
+    width: 100%;
+    margin-top: 12px;
+
+}
+
+.container:not(:last-child) {
+    margin-bottom:75px;
+
+}
+
+
+.section {
+    max-width: 500px;
+    width: 100%;
+}
+
+.showcase-section{ 
+    width: 100%;
+    max-width: 700px;
+    max-height: 500px;
+    margin: 0 auto;
+    padding-right: 5px;
+    overflow-y: auto;
+
+}
+
+.showcase-item {
+    display: block;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    color: #000;
+    border-bottom: solid 1px #666;
+    text-decoration: none;
+}
+
+.repo-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+.repo-desc {
+    font-size: 18px ;
+}
+
+.work-list {
+    max-width: 500px;
+}
+
+.item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.item-title{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.item-subtitle{
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.item-detail{
+    font-size: 20px;
+    color: #888;
+}
+
+.item-year{
+    font-size: 15px;
+    color: #888;
+}
+
+.work-item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.work-detail{
+    display: flex;
+    max-width: 700%;
+    font-size: 20px;
+    margin-bottom: 30px;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1260px) {
+    .section:not(:first-child) h4 {
+        margin-top: 50px;
+    }
+
+    .stacks {
+        display: block;
+        width: calc(100% - 60px);
+        margin: 0 30px 50px;
+        text-align: center;
+    }
+    .stacks span {
+        margin-right: 5px;
+    }
+    .toggle {
+        width: calc(100% - 60px) ;
+        margin: 0 30px 50px;
+    }
+    .container {
+        flex-direction: column;
+        padding:0 30px ;
+    }
+
+    .section {
+        max-width: 100%;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .work-detail {
+        max-width: 100%;
+    }
+}

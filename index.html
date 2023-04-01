@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculum Vitae | Bayu Abrilianto Website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="asset/style.css" />
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </head>
+
+  <body x-data="alpineData()" x-init="initData()">
+    <div class="background"></div>
+      <img src="asset/images/bayu.jpg" class="profile-pict" />
+    <h1>Bayu Abrilianto</h1>
+    <h2>
+      I am a D3 graduate of informatics engineering at Batam State Polytechnic,
+      has a conscientious personality, and hard worker,able to work with many
+      people and able to collaborate with teams from various backgrounds.
+    </h2>
+    <h3><img src="asset/location-dot-solid.svg" />Batam, Indonesia</h3>
+    <div class="stacks">
+      <template x-for="language in languages">
+        <span x-text="language.label" 
+          :style="'background:' + language.bgColor + '; color: ' + language.color + ';'"></span>
+      </template>
+    </div>
+    <div class="toggle">
+      <button :class="toggle == 0 && 'active'" @click="toggle = 0">Curriculum Vitae</button>
+      <button :class="toggle == 1 && 'active'" @click="toggle = 1">Showcase</button>
+    </div>
+    <div class="container" x-show="toggle == 0">
+      <div class="section">
+        <h4>Education</h4>
+        <div class="item">
+          <div class="item-title">Informatics Engineering</div>
+          <div class="item-subtitle">Bachelor's Degree</div>
+          <div class="item-detail">Batam State Polytechnic</div>
+          <div class="item-year">Jul 2017 - Oct 2020</div>
+        </div>
+        <div class="item">
+          <div class="item-title">Computer and Networking Engineering</div>
+          <div class="item-subtitle">Vocational School Degree</div>
+          <div class="item-detail">Real Informatika Batam</div>
+          <div class="item-year">May 2014 - Jun 2016</div>
+        </div>
+      </div>
+      <div class="section">
+        <h4>Training</h4>
+        <div class="item">
+          <div class="item-title">Fundamentals of Digital Marketing</div>
+          <div class="item-subtitle">Google Digital Garage, 2022</div>
+        </div>
+        <div class="item">
+          <div class="item-title">Ahli Komputer Madya</div>
+          <div class="item-subtitle">
+            Badan Nasional Sertifikasi Profesi (BNSP), 2022
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-title">Foresec Sertified in Networking Security</div>
+          <div class="item-subtitle">ForeSec, 2018</div>
+        </div>
+        <div class="item">
+          <div class="item-title">
+            CCNA Routing and Switching Introduction to Network
+          </div>
+          <div class="item-subtitle">Cisco Networking Academy, 2018</div>
+        </div>
+      </div>
+    </div>
+    <section class="work-section" id="work">
+      <div class="container" x-show="toggle == 0">
+        <table cellpadding="7" style="border-collapse: collapse; width: 100%">
+          <tr>
+            <td><h4>Work History</h4></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="item">
+                <div class="item-title">PT SIIX Electronic Indonesia</div>
+                <div class="item-job">Quality Assurance Inspector</div>
+                <div class="item-year">Oct 2020 - Oct 2022</div>
+              </div>
+            </td>
+            <td>
+              <div class="work-detail">
+                Responsible for product quality to customers, checking with
+                testing and visual methods, identifying problems with good and
+                not good products, monitoring the production process, and
+                documenting quality inspection results.
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="item">
+                <div class="item-title">BAPENDA Kepri</div>
+                <div class="item-job">Internship IT Support</div>
+                <div class="item-year">Agu 2019 - Apr 2020</div>
+              </div>
+            </td>
+            <td>
+              <div class="work-detail">
+                Responsible for maintaining the SAMSAT website, creating user
+                interfaces on android applications, maintaining employee
+                computers, and making graphic designs about SAMSAT services.
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="item">
+                <div class="item-title">PT Ecogreen Oleochemicals Batam</div>
+                <div class="item-job">Internship IT Support</div>
+                <div class="item-year">Jan 2015 - Mar 2015</div>
+              </div>
+            </td>
+            <td>
+              <div class="work-detail">
+                Responsible for maintaining and updating hardware and software,
+                repairing employee computers, and assisting in network
+                configuration in new buildings.
+              </div>
+            </td>
+          </tr>
+        </table>
+        <!-- <div class="work-list">
+          <h4>Work History</h4>
+          <div class="work-item"></div>
+          <div class="item">
+            <div class="item-title">PT SIIX Electronic Indonesia</div>
+            <div class="item-job">Quality Assurance Inspector</div>
+            <div class="item-year">Oct 2020 - Oct 2022</div>
+          </div>
+          <div class="item">
+            <div class="item-title">BAPENDA Kepri</div>
+            <div class="item-job">Internship IT Support</div>
+            <div class="item-year">Agu 2019 - Apr 2020</div>
+          </div>
+          <div class="item">
+            <div class="item-title">PT Ecogreen Oleochemicals Batam</div>
+            <div class="item-job">Internship IT Support</div>
+            <div class="item-year">Jan 2015 - Mar 2015</div>
+          </div>
+        </div>
+        <div class="container-detail">
+          <div class="work-detail">
+            Responsible for product quality to customers, checking with testing
+            and visual methods, identifying problems with good and not good
+            products, monitoring the production process, and documenting quality
+            inspection results.
+          </div>
+          <div class="work-detail">
+            Responsible for maintaining the SAMSAT website, creating user
+            interfaces on android applications, maintaining employee computers,
+            and making graphic designs about SAMSAT services.
+          </div>
+          <div class="work-detail">
+            Responsible for maintaining and updating hardware and software,
+            repairing employee computers, and assisting in network configuration
+            in new buildings.
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <div class="container" x-show="toggle == 1">
+      <div class="showcase-section">
+        <template x-for="repo in repositories">
+          <a class="showcase-item" :href="repo.html_url">
+            <div class="repo-name" x-text="repo.name"></div>
+            <div class="repo-desc" x-text="repo.description"></div>
+          </a>
+        </template>
+      </div>
+    </div>
+    <footer>
+        <div class="footer-copy">
+            Curriculum Vitae of Bayu Abrilianto. &copy; 2023
+        </div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="asset/script.js"></script>
+    </footer>
+  </body>
+</html>
